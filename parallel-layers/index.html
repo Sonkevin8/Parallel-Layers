@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Layers — Movement</title>
+  <meta name="description" content="Parallel Layers: Events, community comments, and announcements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">PL</div>
+        <div class="title">Parallel Layers</div>
+      </div>
+      <nav>
+        <a href="#events">Events</a>
+        <a href="#comments">Voices</a>
+        <a href="#about">About</a>
+        <a class="instagram" href="https://www.instagram.com/parallel.layers/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">Layers in Motion</h1>
+            <p>We move together. We learn, build, and celebrate. Join the movement—discover upcoming events, share your experience, and amplify the signal.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#events">Explore Events</a>
+              <a class="btn ghost" href="#comments">Share Your Voice</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="poster poster-a">Parallel</div>
+            <div class="poster poster-b">Layers</div>
+            <div class="poster poster-c">Move</div>
+          </div>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track" id="tickerTrack">
+          <span>Parallel Layers • Movement • Events • Community • Art • </span>
+          <span>Parallel Layers • Movement • Events • Community • Art • </span>
+          <span>Parallel Layers • Movement • Events • Community • Art • </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events-section" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="events-title">Event Announcements</h2>
+          <button class="btn small" id="addEventBtn" aria-controls="eventFormModal" aria-expanded="false">Post Event</button>
+        </div>
+        <div id="eventsGrid" class="events-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="comments" class="comments-section" aria-labelledby="comments-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="comments-title">Voices from the Movement</h2>
+        </div>
+        <form id="commentForm" class="comment-form" autocomplete="on">
+          <div class="form-row">
+            <input aria-label="Your name" id="commentName" type="text" placeholder="Your name" required />
+            <input aria-label="Event attended" id="commentEvent" type="text" placeholder="Event attended" required />
+          </div>
+          <textarea aria-label="Your experience" id="commentText" rows="4" placeholder="How was your experience?" required></textarea>
+          <div class="form-row">
+            <button class="btn primary" type="submit">Post Comment</button>
+            <button class="btn ghost" type="button" id="clearCommentsBtn" title="Clear all comments">Clear</button>
+          </div>
+        </form>
+        <ul id="commentsList" class="comments-list" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <h2 id="about-title">About the Movement</h2>
+            <p>Parallel Layers is a living rhythm—intersections of art, community, and technology. We host gatherings that explore culture and motion, staged in bold monochrome with a pulse of red.</p>
+          </div>
+          <div class="about-card">
+            <h3>Get Involved</h3>
+            <ul>
+              <li>Attend an event</li>
+              <li>Share your story</li>
+              <li>Collaborate on artwork</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Parallel Layers. All movement, all the time.</p>
+    </div>
+  </footer>
+
+  <dialog id="eventFormModal" class="modal">
+    <form id="eventForm" method="dialog" class="modal-content">
+      <header>
+        <h3>Post a new event</h3>
+        <button class="icon-btn" id="closeModalBtn" type="button" aria-label="Close">✕</button>
+      </header>
+      <div class="fields">
+        <input id="eventTitle" type="text" placeholder="Event title" required />
+        <input id="eventDate" type="date" required />
+        <input id="eventLocation" type="text" placeholder="Location" required />
+        <input id="eventImage" type="url" placeholder="Poster image URL (optional)" />
+        <textarea id="eventDesc" rows="3" placeholder="Description" required></textarea>
+      </div>
+      <footer>
+        <button class="btn primary" id="saveEventBtn" type="submit">Save Event</button>
+        <button class="btn ghost" type="button" id="cancelEventBtn">Cancel</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="/assets/app.js" type="module"></script>
+</body>
+</html>
