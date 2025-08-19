@@ -23,12 +23,25 @@ a:hover {
 }
 
 body {
+  background: transparent !important;
+  color: #fff;        /* white text for contrast */
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  flex-direction: column;
+  padding: 0 1em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
 }
+
+/* Optional: Add a red accent for headings or buttons */
+h1, h2, h3, h4, h5, h6 {
+  color: #ed4956;        /* Instagram red */
+}
+
+
 
 h1 {
   font-size: 3.2em;
@@ -52,6 +65,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.navbar {
+  /* ...existing code... */
+  align-self: stretch;
 }
 
 @media (prefers-color-scheme: light) {

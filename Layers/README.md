@@ -1,12 +1,63 @@
-# React + Vite
+# Parallel Layers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+"Parallel Layers" is a web application designed to provide a platform for event announcements, user experiences, merchandise, and artwork related to a specific movement. The application is built using React and Vite, ensuring a fast and responsive user experience.
 
-Currently, two official plugins are available:
+## Features
+- **Navigation Bar**: Easily navigate through different sections of the website.
+- **Event Announcements**: Stay updated with the latest events related to the movement.
+- **User Experiences**: Share and view personal experiences from users.
+- **Merchandise**: Browse and purchase available merchandise.
+- **Artwork**: Explore artwork that represents the movement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+```
+Parallel-Layers
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   ├── Navbar.jsx
+│   │   ├── EventAnnouncements.jsx
+│   │   ├── UserExperiences.jsx
+│   │   ├── Merchandise.jsx
+│   │   └── Artwork.jsx
+│   ├── pages
+│   │   ├── Home.jsx
+│   │   ├── Events.jsx
+│   │   ├── Experiences.jsx
+│   │   ├── Merchandise.jsx
+│   │   └── Artwork.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles
+│       └── Navbar.css
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-## Expanding the ESLint configuration
+## Setup Instructions
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```
+   cd Parallel-Layers
+   ```
+3. Install the dependencies:
+   ```
+   npm install
+   ```
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+5. Open your browser and go to `http://localhost:3000` to view the application.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
