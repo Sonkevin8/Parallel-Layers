@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parallel Layers — Purposeful, joyful action in motion</title>
+    <meta name="description" content="Parallel Layers is a movement and community where purposeful, joyful action attracts like‑minded people, creating growth, unity, and deeper human connection." />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Parallel Layers" />
+    <meta property="og:description" content="A lived culture of connection, creativity, and authentic momentum." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="brand" aria-label="Parallel Layers home">
+          <span class="brand-mark">≋</span>
+          <span class="brand-name">Parallel Layers</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+          <ul id="navMenu">
+            <li><a href="#principles">Principles</a></li>
+            <li><a href="#layers">Layers</a></li>
+            <li><a href="#events">Experiences</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a class="btn small" href="#join">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="decor decor-a" aria-hidden="true"></div>
+        <div class="decor decor-b" aria-hidden="true"></div>
+        <div class="container">
+          <h1 class="headline">Purposeful, joyful action—together.</h1>
+          <p class="subhead">
+            Parallel Layers is a movement and community built on the belief that
+            purposeful, joyful action attracts like‑minded people, creating growth, unity, and deeper human connection.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#add-layer">Add your layer</a>
+            <a class="btn ghost" href="#join">Join the movement</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container grid two">
+          <div>
+            <h2>Live the vision, don’t just talk about it</h2>
+            <p>
+              It’s about living the vision, not just talking about it—proving its value through real‑world experiences,
+              events, and relationships.
+            </p>
+            <ul class="key-points">
+              <li>Every action, project, and interaction becomes a <strong>layer</strong> in the bigger picture.</li>
+              <li>These layers run in parallel between people—our stories, passions, and moments existing side by side, influencing and inspiring each other.</li>
+            </ul>
+          </div>
+          <div class="card glass">
+            <h3>Core principles</h3>
+            <ol class="numbered">
+              <li>
+                <strong>Connection through shared experience</strong> — bringing people together physically and emotionally.
+              </li>
+              <li>
+                <strong>Creativity as a bridge</strong> — art, storytelling, and collaboration as tools for unity.
+              </li>
+              <li>
+                <strong>Momentum through authenticity</strong> — consistency in living the values attracts genuine support.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="stands-out section" id="stands-out">
+        <div class="container">
+          <h2>Why it stands out</h2>
+          <div class="grid three">
+            <div class="card">
+              <h3>Self‑proving</h3>
+              <p>Growth is shown in the community, art, and projects it sparks.</p>
+            </div>
+            <div class="card">
+              <h3>Lived culture</h3>
+              <p>Not just an event or brand—it expands through participation.</p>
+            </div>
+            <div class="card">
+              <h3>Heart‑led + action‑driven</h3>
+              <p>Emotional resonance blends with tangible outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision section" id="vision">
+        <div class="container narrow">
+          <h2>A shared momentum that’s impossible to ignore</h2>
+          <p class="lead">
+            A thriving, accepting community where people work shoulder‑to‑shoulder, share their layers of life, and create momentum together.
+          </p>
+        </div>
+      </section>
+
+      <section class="layers section" id="layers">
+        <div class="container">
+          <div class="section-header">
+            <h2>Layers from the community</h2>
+            <p>Stories, passions, and moments that run in parallel—and inspire.</p>
+          </div>
+          <ul id="layerList" class="layer-list grid three" aria-live="polite"></ul>
+        </div>
+      </section>
+
+      <section class="add-layer section" id="add-layer">
+        <div class="container grid two">
+          <div>
+            <h2>Add your layer</h2>
+            <p>Share a small story, project, or moment. What did you make, who did you connect with, or how did you move with intention?</p>
+            <form id="layerForm" class="form card" novalidate>
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Ada Lovelace" required />
+              </div>
+              <div class="field">
+                <label for="title">Layer title</label>
+                <input id="title" name="title" type="text" placeholder="Pop‑up mural meetup" required />
+              </div>
+              <div class="field">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" placeholder="What happened? Who was involved? What did it spark?" required></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="submit">Publish layer</button>
+                <span id="formStatus" role="status" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+          <div class="card glass helpful">
+            <h3>What counts as a layer?</h3>
+            <ul class="key-points">
+              <li>A shared meal that led to a new idea</li>
+              <li>An open studio night with neighbors</li>
+              <li>A zine, playlist, or short film made together</li>
+              <li>Moments of support that sparked momentum</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="events section" id="events">
+        <div class="container">
+          <div class="section-header">
+            <h2>Experiences & gatherings</h2>
+            <p>Where connection happens in real life. Host one, join one, or start small with friends.</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="content card">
+                <h3>Neighborhood Art Walk</h3>
+                <p>Pop‑up canvases, sidewalk chalk, and live sound. New collaborations formed on the spot.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="content card">
+                <h3>Story Night</h3>
+                <p>Evening of short, true stories on the theme of "Bridges"—from strangers to friends.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="content card">
+                <h3>Make‑Together Session</h3>
+                <p>Music, zines, and motion—creativity as a bridge in action.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join section" id="join">
+        <div class="container grid two">
+          <div>
+            <h2>Join the movement</h2>
+            <p>
+              Show up with authenticity, add your layer, and invite two friends to add theirs. That’s how momentum grows.
+            </p>
+            <ul class="key-points">
+              <li>Follow along and share what you make</li>
+              <li>Host a small, open gathering</li>
+              <li>Collaborate across layers</li>
+            </ul>
+          </div>
+          <div class="card form" role="form">
+            <h3>Get updates</h3>
+            <p>Drop your email to get occasional notes about community layers and pop‑up gatherings.</p>
+            <form id="subscribeForm" class="inline-form" novalidate>
+              <input id="subscribeEmail" type="email" placeholder="you@example.com" required />
+              <button class="btn primary" type="submit">Notify me</button>
+            </form>
+            <p id="subscribeStatus" class="form-hint" role="status" aria-live="polite"></p>
+            <p class="form-hint mini">We’ll keep it light. You can unsubscribe anytime.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Parallel Layers</p>
+        <nav aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#layers">Layers</a>
+          <a href="#join">Join</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
