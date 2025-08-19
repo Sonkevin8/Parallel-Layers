@@ -1,12 +1,30 @@
-# React + Vite
+# Layers — Movement Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A striking, responsive web app for the "Layers" movement with events and RSVP, a merch showcase, and a mobile hamburger menu. Color palette: black / white with red accents inspired by `@parallel.layers`.
 
-Currently, two official plugins are available:
+## Features
+- Responsive layout with animated hamburger navigation
+- Events grid with RSVP modal; attendee names saved to localStorage
+- Merchandise showcase grid with pricing (placeholder actions)
+- Smooth scrolling, accessible focus states, and clean typography
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run locally
+No build required. Open `index.html` directly, or serve the folder:
 
-## Expanding the ESLint configuration
+```bash
+# From the repo root
+cd layers-web
+python3 -m http.server 5173
+# then open http://localhost:5173 in your browser
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Alternatively, use any static server (e.g., `npx serve`).
+
+## Customize
+- Edit events in `app.js` (the `events` array)
+- Edit merchandise in `app.js` (the `merchandise` array)
+- Tweak colors in `styles.css` (`:root` variables)
+
+## Notes
+- RSVP data is saved in your browser `localStorage` under keys like `layers_rsvp_<eventId>`
+- To reset RSVPs for an event, run `localStorage.removeItem('layers_rsvp_layers-001')` in DevTools

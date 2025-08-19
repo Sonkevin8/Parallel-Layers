@@ -1,13 +1,156 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layers — Movement</title>
+    <meta name="description" content="Layers is a movement. Events, people, and merch." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Ctext x='50' y='60' font-size='54' text-anchor='middle' fill='%23ff2a2a' font-family='Bebas Neue, Arial, sans-serif'%3EL%3C/text%3E%3C/svg%3E" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="#home" class="logo" aria-label="Layers home">
+          <span class="logo-mark">▮</span>
+          <span class="logo-text">LAYERS</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" role="navigation">
+          <a href="#home">Home</a>
+          <a href="#movement">Movement</a>
+          <a href="#events">Events</a>
+          <a href="#merch">Merch</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1 class="headline"><span class="stroke">LAYERS</span> MOVEMENT</h1>
+          <p class="tagline">Culture in strata. Sound. Vision. Community.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#events">Upcoming Events</a>
+            <a class="btn btn-ghost" href="#merch">View Merch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="movement" class="section section-light">
+        <div class="container grid-two">
+          <div>
+            <h2 class="section-title">What is Layers?</h2>
+            <p>
+              Layers is a movement exploring the intersections of music, design, and community.
+              We build spaces where originality stacks, collaborators meet, and ideas cut through
+              the noise. Every event is an artifact; every artifact, a layer.
+            </p>
+            <p>
+              Follow us on Instagram
+              <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/parallel.layers/">@parallel.layers</a>
+              for drops and announcements.
+            </p>
+          </div>
+          <div class="movement-card">
+            <div class="movement-art"></div>
+            <div class="movement-copy">
+              <h3>Parallel, not perpendicular.</h3>
+              <p>We move forward together—stacked, not stacked against.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Events</h2>
+            <p class="muted">Tap an event to RSVP. Names are saved locally on your device.</p>
+          </div>
+          <div id="events-grid" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section id="merch" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Merch</h2>
+            <p class="muted">Artifacts from the movement. Limited runs. Bold by design.</p>
+          </div>
+          <div id="merch-grid" class="card-grid merch-grid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container grid-two">
+          <div>
+            <h2 class="section-title">Contact</h2>
+            <p>Collab with us, book a show, or host a pop-up.</p>
+            <ul class="contact-list">
+              <li>Email: <a class="link" href="mailto:hello@layers.move">hello@layers.move</a></li>
+              <li>Instagram: <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/parallel.layers/">@parallel.layers</a></li>
+            </ul>
+          </div>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — we\'ll be in touch.'); this.reset();">
+            <label>
+              <span>Name</span>
+              <input type="text" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" required placeholder="you@domain" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea rows="4" required placeholder="Let\'s build."></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="foot-left">
+          <span class="logo-text">LAYERS</span>
+          <span class="subtitle">Movement</span>
+        </div>
+        <div class="foot-right">
+          <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/parallel.layers/">Instagram</a>
+          <a class="link" href="#events">Events</a>
+          <a class="link" href="#merch">Merch</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- RSVP Modal -->
+    <dialog id="rsvp-modal" class="modal">
+      <form id="rsvp-form" method="dialog" class="modal-card">
+        <button type="button" class="modal-close" id="modal-close" aria-label="Close">×</button>
+        <h3 id="modal-title">RSVP</h3>
+        <p id="modal-subtitle" class="muted">Add your name to the list.</p>
+        <label>
+          <span>Your name</span>
+          <input id="rsvp-name" type="text" placeholder="Jane Doe" required />
+        </label>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" type="button" id="modal-cancel">Cancel</button>
+          <button class="btn btn-primary" type="submit">I\'m in</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js" defer></script>
   </body>
 </html>
