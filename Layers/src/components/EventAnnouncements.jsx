@@ -2,9 +2,9 @@ import React from 'react';
 
 const EventAnnouncements = () => {
   const events = [
-    { id: 1, title: 'Event 1', date: '2023-10-01', description: 'Description for Event 1' },
-    { id: 2, title: 'Event 2', date: '2023-10-15', description: 'Description for Event 2' },
-    { id: 3, title: 'Event 3', date: '2023-11-01', description: 'Description for Event 3' },
+    { id: 1, title: 'Event 1', date: '2024-07-15', description: 'Description for Event 1' },
+    { id: 2, title: 'Event 2', date: '2024-08-01', description: 'Description for Event 2' },
+    { id: 3, title: 'Event 3', date: '2024-08-20', description: 'Description for Event 3' },
   ];
 
   return (

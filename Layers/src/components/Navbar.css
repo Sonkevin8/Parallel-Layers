@@ -1,13 +1,9 @@
 .navbar {
   background: linear-gradient(90deg, #2d0101 0%, #000 100%);
-  /* #2d0101 is a dark maroon, #000 is black */
   padding: 1rem 0;
-  width: 100vw;
+  width: 100%;
   margin: 0;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
+  box-sizing: border-box;
 }
 
 .navbar-menu {
@@ -20,7 +16,7 @@
 }
 
 .navbar-menu a {
-  color: #fff; /* white */
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.2s, background 0.2s;
@@ -29,6 +25,11 @@
 }
 
 .navbar-menu a:hover {
-  background: #ed4956; /* Instagram red */
+  background: #ed4956;
+  color: #fff;
+}
+
+.navbar-menu .active {
+  background: #ed4956;
   color: #fff;
 }
