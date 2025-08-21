@@ -1,11 +1,153 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Merchandise = () => {
+  const [items] = useState([
+    {
+      id: 1,
+      name: 'Parallel Layers T-Shirt',
+      price: '$25',
+      description: 'Soft cotton tee featuring our signature layered design. Wear your connection to the movement.',
+      image: 'https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'apparel'
+    },
+    {
+      id: 2,
+      name: 'Community Hoodie',
+      price: '$45',
+      description: 'Cozy hoodie perfect for community gatherings. Features embroidered "Layers" text.',
+      image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'apparel'
+    },
+    {
+      id: 3,
+      name: 'Layer Sticker Pack',
+      price: '$8',
+      description: 'Set of 10 unique stickers representing different layers of experience and connection.',
+      image: 'https://images.pexels.com/photos/4464820/pexels-photo-4464820.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'accessories'
+    },
+    {
+      id: 4,
+      name: 'Parallel Stories Journal',
+      price: '$18',
+      description: 'Beautiful journal for capturing your layers of experience. Includes prompts for reflection.',
+      image: 'https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'stationery'
+    },
+    {
+      id: 5,
+      name: 'Connection Poster Series',
+      price: '$15',
+      description: 'Set of 3 artistic posters celebrating community, creativity, and authentic connection.',
+      image: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'art'
+    },
+    {
+      id: 6,
+      name: 'Layers Tote Bag',
+      price: '$20',
+      description: 'Eco-friendly canvas tote featuring layered geometric design. Perfect for community events.',
+      image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400',
+      category: 'accessories'
+    }
+  ]);
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [cart, setCart] = useState([]);
+
+  const categories = ['all', 'apparel', 'accessories', 'stationery', 'art'];
+
+  const filteredItems = selectedCategory === 'all' 
+    ? items 
+    : items.filter(item => item.category === selectedCategory);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    // In a real app, this would integrate with a shopping cart system
+    alert(`${item.name} added to cart!`);
+  };
+
   return (
-    <div>
+    <div className="content-section">
       <h1>Merchandise</h1>
-      <p>Check out our available merchandise related to the movement!</p>
-      {/* Add merchandise items here */}
+      
+      <div className="card">
+        <p>
+          Support the Parallel Layers movement with merchandise that represents our values of connection, 
+          creativity, and authentic community. Every purchase helps fund community events and projects.
+        </p>
+        <p>
+          <strong>More than merchandise:</strong> These items are conversation starters, connection points, 
+          and ways to carry the movement's energy into your daily life.
+        </p>
+      </div>
+
+      {/* Category Filter */}
+      <div className="category-filter">
+        <h3>Shop by Category</h3>
+        <div className="filter-buttons">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Merchandise Grid */}
+      <div className="merchandise-grid">
+        {filteredItems.map(item => (
+          <div key={item.id} className="merchandise-card">
+            <div className="item-image">
+              <img src={item.image} alt={item.name} />
+              <div className="item-overlay">
+                <button 
+                  className="quick-add-btn"
+                  onClick={() => addToCart(item)}
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div className="item-info">
+              <h4>{item.name}</h4>
+              <p className="item-description">{item.description}</p>
+              <div className="item-footer">
+                <span className="item-price">{item.price}</span>
+                <span className="item-category">#{item.category}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="card">
+        <h3>Supporting the Movement</h3>
+        <p>
+          Every purchase directly supports:
+        </p>
+        <ul>
+          <li><strong>Community Events:</strong> Workshops, storytelling circles, and showcases</li>
+          <li><strong>Creative Projects:</strong> Collaborative art and community initiatives</li>
+          <li><strong>Space & Resources:</strong> Venues and materials for gatherings</li>
+          <li><strong>Outreach:</strong> Growing the movement and reaching new communities</li>
+        </ul>
+        <p>
+          When you wear or use Parallel Layers merchandise, you're not just representing a brand—
+          you're carrying forward a living culture of connection and creativity.
+        </p>
+      </div>
+
+      {cart.length > 0 && (
+        <div className="cart-summary">
+          <h4>Cart Summary ({cart.length} items)</h4>
+          <p>Items will be processed through our secure checkout system.</p>
+        </div>
+      )}
     </div>
   );
 };
