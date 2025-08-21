@@ -14,22 +14,23 @@ const App = () => {
       <AnimatedBackground />
       <Router>
         {/* Layout container for sidebar + main content */}
-        <div className="layout-container">
-          <Navbar />
-          <div className="content-container">
-            <Routes>
-              <Route path="/" element={<Home />} />
+<div className="layout-container">
+  <div className="Navbar">
+    <Navbar />
+  </div>
+  <div className="content-container">
+    <Routes>
+         <Route path="/" element={<Home />} />
               <Route path="/events" element={<Events />} />
               <Route path="/experiences" element={<Experiences />} />
               <Route path="/merchandise" element={<Merchandise />} />
               <Route path="/artwork" element={<Artwork />} />
-            </Routes>
-          </div>
-        </div>
-      </Router>
+    </Routes>
+  </div>
+</div>
+  </Router>
     </>
   );
 };
 
 export default App;
-
