@@ -13,21 +13,22 @@ const App = () => {
     <>
       <AnimatedBackground />
       <Router>
-        <div className="layout-container">
-          <div className="Navbar">
-            <Navbar />
-          </div>
-          <div className="content-container">
-            <Routes>
-              <Route path="/" element={<Home />} />
+        {/* Layout container for sidebar + main content */}
+<div className="layout-container">
+  <nav className="Navbar">
+    <Navbar />
+  </nav>
+  <main className="content-container">
+    <Routes>
+         <Route path="/" element={<Home />} />
               <Route path="/events" element={<Events />} />
               <Route path="/experiences" element={<Experiences />} />
               <Route path="/merchandise" element={<Merchandise />} />
               <Route path="/artwork" element={<Artwork />} />
-            </Routes>
-          </div>
-        </div>
-      </Router>
+    </Routes>
+  </main>
+</div>
+  </Router>
     </>
   );
 };

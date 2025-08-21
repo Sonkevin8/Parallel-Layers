@@ -1,45 +1,52 @@
-/* Layout for sidebar + main area */
+/* Layout for sidebar + content */
 .layout-container {
   display: flex;
   min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar always visible, shrinks on mobile */
 .Navbar {
   min-width: 220px;
   max-width: 250px;
   background: #222;
   color: #fff;
   padding: 1rem 0;
+  box-sizing: border-box;
 }
 
-/* Main content */
+/* Main content fills remaining space */
 .content-container {
   flex: 1;
   padding: 2rem;
   background: #fafafa;
   min-width: 0;
+  box-sizing: border-box;
 }
 
-/* Responsive styles for mobile */
-@media (max-width: 900px) {
+/* MOBILE: Stack sidebar above content for screens <= 600px (iPhone 12 size) */
+@media (max-width: 600px) {
   .layout-container {
     flex-direction: column;
   }
   .Navbar {
-    min-width: 100vw;
-    max-width: 100vw;
-    width: 100vw;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
     height: auto;
+    font-size: 0.96rem;
+    padding: 0.5rem 0;
   }
   .content-container {
-    width: 100vw;
-    min-width: 0;
-    padding: 1rem;
+    width: 100vw !important;
+    min-width: 0 !important;
+    padding: 1rem !important;
   }
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.1rem; }
+  p, li { font-size: 1rem; }
 }
 
-/* Prevent horizontal scroll on mobile */
+/* Prevent horizontal scroll */
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
