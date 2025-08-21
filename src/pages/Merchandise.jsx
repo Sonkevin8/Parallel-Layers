@@ -5,7 +5,7 @@ const Merchandise = () => {
     {
       id: 1,
       name: 'Parallel Layers T-Shirt',
-      price: '$25',
+      price: '$',
       description: 'Soft cotton tee featuring our signature layered design. Wear your connection to the movement.',
       image: 'https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=400',
       category: 'apparel'
@@ -13,43 +13,20 @@ const Merchandise = () => {
     {
       id: 2,
       name: 'Community Hoodie',
-      price: '$45',
+      price: '$',
       description: 'Cozy hoodie perfect for community gatherings. Features embroidered "Layers" text.',
       image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400',
       category: 'apparel'
     },
     {
-      id: 3,
-      name: 'Layer Sticker Pack',
-      price: '$8',
-      description: 'Set of 10 unique stickers representing different layers of experience and connection.',
-      image: 'https://images.pexels.com/photos/4464820/pexels-photo-4464820.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'accessories'
-    },
-    {
-      id: 4,
-      name: 'Parallel Stories Journal',
-      price: '$18',
-      description: 'Beautiful journal for capturing your layers of experience. Includes prompts for reflection.',
-      image: 'https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'stationery'
-    },
-    {
       id: 5,
-      name: 'Connection Poster Series',
-      price: '$15',
+      name: 'Connection Poster',
+      price: '$',
       description: 'Set of 3 artistic posters celebrating community, creativity, and authentic connection.',
       image: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=400',
       category: 'art'
     },
-    {
-      id: 6,
-      name: 'Layers Tote Bag',
-      price: '$20',
-      description: 'Eco-friendly canvas tote featuring layered geometric design. Perfect for community events.',
-      image: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=400',
-      category: 'accessories'
-    }
+   
   ]);
 
   const [selectedCategory, setSelectedCategory] = useState('all');

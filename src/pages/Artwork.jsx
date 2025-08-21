@@ -4,64 +4,34 @@ export default function Artwork() {
   const [artworks] = useState([
     {
       id: 1,
-      title: 'Layers of Connection',
+      title: 'Layers',
       artist: 'Community Collective',
       description: 'A collaborative piece created during our first community art workshop. Each participant added their own layer, representing their unique story while contributing to the whole.',
       image: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=600',
       medium: 'Mixed Media',
-      year: '2024',
-      story: 'This piece emerged organically as community members shared their experiences. The overlapping colors and textures represent how our individual stories intersect and influence each other.'
+      year: '----',
+      story: 'This piece .'
     },
     {
       id: 2,
       title: 'Parallel Narratives',
-      artist: 'Sarah M. & Marcus T.',
+      artist: 'John doe and jane doe.',
       description: 'A visual storytelling piece that maps the parallel journeys of two community members who discovered their paths were more similar than different.',
       image: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600',
       medium: 'Digital Art',
-      year: '2024',
-      story: 'Created after a storytelling circle where Sarah and Marcus realized their experiences of starting over in new cities had remarkable parallels. This piece visualizes those connections.'
+      year: '----',
+      story: 'Created after a storytelling circle where............. realized their experiences of starting over in new cities had remarkable parallels. This piece visualizes those connections.'
     },
     {
       id: 3,
       title: 'The Bridge',
-      artist: 'Elena R.',
-      description: 'An abstract representation of creativity as a bridge between people, inspired by the core principle that art connects us across differences.',
+      artist: '.',
+      description: '........',
       image: 'https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&w=600',
       medium: 'Acrylic on Canvas',
-      year: '2024',
-      story: 'Elena created this after witnessing how art brought together people from completely different backgrounds during a community workshop. The bridge represents creativity as a universal language.'
+      year: '20--',
+      story: '.'
     },
-    {
-      id: 4,
-      title: 'Momentum',
-      artist: 'Community Workshop',
-      description: 'A kinetic sculpture representing the authentic momentum that builds when people live their values consistently.',
-      image: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=600',
-      medium: 'Recycled Materials',
-      year: '2024',
-      story: 'Built from materials brought by community members, each piece represents an action or decision that contributed to the movement\'s growth.'
-    },
-    {
-      id: 5,
-      title: 'Layers Unveiled',
-      artist: 'Anonymous',
-      description: 'A series of transparent panels that reveal different layers of human experience when viewed from various angles.',
-      image: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600',
-      medium: 'Glass & Light',
-      year: '2024',
-      story: 'This piece invites viewers to move around and discover how perspective changes what layers are visible, much like how we reveal different aspects of ourselves in different relationships.'
-    },
-    {
-      id: 6,
-      title: 'Shared Roots',
-      artist: 'The Storytelling Circle',
-      description: 'A collaborative tree sculpture where each branch represents a story shared in our community gatherings.',
-      image: 'https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&w=600',
-      medium: 'Wood & Metal',
-      year: '2024',
-      story: 'Every time someone shares their story at our gatherings, a new branch is added. The tree grows as our community grows, showing how individual stories strengthen the whole.'
-    }
   ]);
 
   const [selectedArtwork, setSelectedArtwork] = useState(null);

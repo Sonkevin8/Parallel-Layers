@@ -291,6 +291,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.9rem;
   max-width: 150px;
   margin: 0;
+  color: #222;
 }
 
 .logout-btn {
@@ -388,6 +389,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.9rem;
   max-width: none;
   margin: 0;
+  color: #222;
 }
 
 .attend-btn.attending {
@@ -446,6 +448,7 @@ input:focus, textarea:focus, select:focus {
 .modal-actions button {
   flex: 1;
   max-width: none;
+  color: #222;
 }
 
 .modal-actions button[type="button"] {
@@ -462,6 +465,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.9rem;
   max-width: 200px;
   margin: 0;
+  background-color: #222;
 }
 
 .experience-modal {

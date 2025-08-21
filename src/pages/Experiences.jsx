@@ -81,7 +81,7 @@ const Experiences = () => {
   return (
     <div className="content-section">
       <div className="flex justify-between items-center mb-4">
-        <h1>User Experiences</h1>
+        <h1>Experiences</h1>
         <button 
           onClick={() => setShowForm(true)} 
           className="share-experience-btn"

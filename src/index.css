@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   line-height: 1.5;
   font-weight: 400;
 
@@ -32,13 +32,13 @@ body {
   min-height: 100vh;
   flex-direction: column;
   padding: 0 1em;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 16px;
 }
 
 /* Optional: Add a red accent for headings or buttons */
 h1, h2, h3, h4, h5, h6 {
-  color: #ed4956;        /* Instagram red */
+  color: #63050c;        /* Instagram red */
 }
 
 

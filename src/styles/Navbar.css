@@ -37,7 +37,7 @@
 }
 
 .navbar-menu a:hover {
-  background: #ed4956;
+  background: #460006;
   color: #fff;
   transform: translateX(4px);
   border-color: rgba(255, 255, 255, 0.2);
@@ -45,7 +45,7 @@
 }
 
 .navbar-menu .active {
-  background: #ed4956;
+  background: #063200;
   color: #fff;
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 2px 8px rgba(237, 73, 86, 0.4);
